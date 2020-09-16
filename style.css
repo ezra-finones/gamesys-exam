@@ -1,0 +1,51 @@
+body {
+    text-align: center;
+}
+
+.header {
+    color: #1b4b72;
+    padding: 20px;
+    font-size: 40px;
+}
+
+.container {
+    background-color: lightgray;
+    max-width: 250px;
+    padding: 10px 20px;
+    overflow: hidden;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.columns {
+    float: left;
+    width: 100%;
+}
+
+[class*="box-"] {
+    padding: 20px;
+    max-width: 250px;
+    background-color: green;
+    margin: 0 10px 5px 10px;
+    color: white;
+    font-size: 24px;
+}
+
+.active {
+    background-color: red;
+}
+
+.active ~ [class*="box-"] {
+    background-color: gray;
+}
+
+@media only screen and (min-width: 992px) {
+    .container {
+        max-width: 500px;
+    }
+    .columns {
+        width: 100%;
+        columns: 2;
+    }
+}
